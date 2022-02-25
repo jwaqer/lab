@@ -35,8 +35,7 @@ public class Notebook {
 		if(f == null) {
 			f = new Folder(folderName);
 			folders.add(f);
-			//f.addNote(note);			
-			//return true;
+			
 		}
 		
 		for(Note n:f.getNotes()) {
