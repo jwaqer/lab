@@ -1,5 +1,4 @@
 package base;
-
 import java.util.Date;
 import java.util.Objects;
 
@@ -21,6 +20,8 @@ public class Note {
 	public int hashCode() {
 		return Objects.hash(title);
 	}
+	
+	//This function is designed for comparing whether two Note objects are the same In this lab, two notes are the same if their titles are the same. 
 
 	@Override
 	public boolean equals(Object obj) {
