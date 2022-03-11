@@ -1,8 +1,9 @@
 package base;
+
 import java.util.Date;
 import java.util.Objects;
 
-public class Note {
+public class Note implements Comparable<Note>  {
 	private Date date;
 	private String title;
 	
@@ -20,8 +21,6 @@ public class Note {
 	public int hashCode() {
 		return Objects.hash(title);
 	}
-	
-	//This function is designed for comparing whether two Note objects are the same In this lab, two notes are the same if their titles are the same. 
 
 	@Override
 	public boolean equals(Object obj) {
@@ -32,4 +31,17 @@ public class Note {
 		Note other = (Note) obj;
 		return Objects.equals(title, other.title);
 	}
+
+	@Override
+	public int compareTo(Note o) {
+	
+		return this.date.compareTo(o.date);
+	}
+		
+	public String toString() {
+		return date.toString() + "\t" + title;
+	}
+	
+
+	
 }
